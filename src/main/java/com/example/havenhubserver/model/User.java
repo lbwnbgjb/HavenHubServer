@@ -1,10 +1,10 @@
 package com.example.havenhubserver.model;
 
 public class User {
-    private int id;
     private String username;
     private String realname;
     private String password;
+    private String gender;
 
     public User() {
     }
@@ -15,13 +15,6 @@ public class User {
         this.password = password;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;
@@ -46,4 +39,11 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public void setGender(String gender){
+        this.gender=gender;
+    }
+
+    public String getGender(){return gender;}
+
 }

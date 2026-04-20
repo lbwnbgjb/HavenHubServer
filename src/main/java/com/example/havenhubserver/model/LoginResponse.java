@@ -5,6 +5,15 @@ public class LoginResponse {
     private String message;
     private String studentId;
     private String name;
+    private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public boolean isSuccess() {
         return success;

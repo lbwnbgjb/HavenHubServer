@@ -27,6 +27,7 @@ public class AuthController {
             response.setMessage("登录成功");
             response.setStudentId(user.getUsername());
             response.setName(user.getRealname());
+            response.setGender(user.getGender());
         } else {
             // 登录失败
             response.setSuccess(false);
@@ -48,7 +49,8 @@ public class AuthController {
         }
         
         // 创建新用户
-        UserEntity newUser = new UserEntity(user.getUsername(), user.getRealname(), user.getPassword());
+        UserEntity newUser = new UserEntity(user.getUsername(), user.getRealname(), user.getPassword() ,user.getGender());
+        System.out.println(user.getGender());
         userRepository.save(newUser);
         
         response.setSuccess(true);

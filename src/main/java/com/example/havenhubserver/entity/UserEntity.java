@@ -13,14 +13,16 @@ public class UserEntity {
     private String username;
     private String realname;
     private String password;
+    private String gender;
 
     public UserEntity() {
     }
 
-    public UserEntity(String username, String realname, String password) {
+    public UserEntity(String username, String realname, String password,String gender){
         this.username = username;
         this.realname = realname;
         this.password = password;
+        this.gender=gender;
     }
 
     public int getId() {
@@ -54,4 +56,6 @@ public class UserEntity {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getGender(){return gender;}
 }
